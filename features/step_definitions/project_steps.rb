@@ -1,0 +1,24 @@
+When(/^I create new project$/) do
+  create_project
+end
+
+Then(/^I add two environments$/) do
+  open_project
+  create_dev_environment
+  create_prod_environment
+end
+
+And(/^I add global variables$/) do
+  add_dev_env_variables
+  add_prod_env_variables
+end
+
+And(/^I delete created environments$/) do
+  delete_dev_env
+  delete_prod_env
+end
+
+Then(/^I add new collection$/) do
+  open_project
+  create_collection
+end
