@@ -4,7 +4,8 @@ Before() do
   @test_project = Project.new('TestProject' + DateTime.now.strftime('%Q'), 'basic')
   @dev_environment = Environment.new('DEV')
   @prod_environment = Environment.new('PROD')
-  @test_collection = Collection.new('', 'TESTAPI')
+  @test_collection = Collection.new('', 'TESTAPI' + DateTime.now.strftime('%Q'))
+  @test_request = Request.new('', 'Step name')
 
 end
 

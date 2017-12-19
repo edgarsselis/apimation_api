@@ -18,7 +18,14 @@ And(/^I delete created environments$/) do
   delete_prod_env
 end
 
-Then(/^I add new collection$/) do
+And(/^I select existing project$/) do
   open_project
+end
+
+Then(/^I add new collection$/) do
   create_collection
+end
+
+Then(/^I create new request$/) do
+  create_request
 end
