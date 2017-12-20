@@ -1,10 +1,13 @@
 require 'json'
 require_relative 'support/api_helper.rb'
 
+build_nr = ARGV[0]
+job_url = ARGV[1]
+
 thumbnail = { 'url' => 'https://cdn.dribbble.com/users/21009/screenshots/3439629/pink_elephant-2.jpg'}
 fields = []
-fields.push({'name' => 'Author', 'value' => 'ES'})
-fields.push({'name' => 'Position', 'value' => 'QA Engineer'})
+fields.push({'name' => 'Jenkins job', 'value' => job_url})
+fields.push({'name' => 'Build number', 'value' => build_nr.to_s})
 
 embed = []
 embed.push({'title' => 'Rich content',
