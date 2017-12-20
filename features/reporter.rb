@@ -3,7 +3,7 @@ require_relative 'support/api_helper.rb'
 
 thumbnail = { 'url' => 'https://cdn.dribbble.com/users/21009/screenshots/3439629/pink_elephant-2.jpg'}
 fields = []
-fields.push'name' => 'Author', 'value' => 'ES'})
+fields.push({'name' => 'Author', 'value' => 'ES'})
 fields.push({'name' => 'Position', 'value' => 'QA Engineer'})
 
 embed = []
